@@ -1,0 +1,8 @@
+/* agm-map {
+  height: 400px;
+} */
+#map {
+  height: 80vh;
+  width: 100%;
+  margin: auto;
+}
