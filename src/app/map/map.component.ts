@@ -86,19 +86,22 @@ export class MapComponent implements OnInit {
 
     navigator.geolocation.getCurrentPosition((position) => {
       const coords = position.coords;
-      const latLong = [coords.latitude, coords.longitude];
+      const latLng = [coords.latitude, coords.longitude];
       console.log(
         `lat: ${position.coords.latitude}, lng: ${position.coords.longitude}`
       );
-      
-      let mymap = L.map('map').setView(latLong, 13);
+      let ran = Math.floor(Math.random() * 3);
+      console.log(food[ran]);
+
+      let mymap = L.map('map').setView(food[ran].latlng, 13);
+
 
       L.tileLayer(
         'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid29yYXdpdGJvYXQiLCJhIjoiY2tnNnA1cHgyMTVsbzJzbHd4djJsNjB5cCJ9.Gge5w2p3hKzPNKZ9kAJVrQ',
         {
           attribution:
             'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          maxZoom: 18,
+          maxZoom: 13,
           id: 'mapbox/streets-v11',
           tileSize: 512,
           zoomOffset: -1,
@@ -106,9 +109,11 @@ export class MapComponent implements OnInit {
         }
       ).addTo(mymap);
 
-      let marker = L.marker(latLong).addTo(mymap);
+      let marker = L.marker(latLng).addTo(mymap);
       if (type == 'food') {
+
         for (let i = 0; i < food.length; i++) {
+
           let store = L.marker(food[i].latlng).addTo(mymap);
           store.bindPopup(
             '<div id="content">' +
@@ -122,6 +127,7 @@ export class MapComponent implements OnInit {
             '<h4>' + food[i].des + '</h4>' +
             "</div>" +
             "</div>").openPopup();
+
         }
       } else if (type == 'noodle') {
         for (let i = 0; i < noodle.length; i++) {
