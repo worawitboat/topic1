@@ -3,6 +3,25 @@
 } */
 #map {
   height: 80vh;
-  width: 100%;
+  width: 80%;
   margin: auto;
+}
+
+ิีbutton {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.example-card {
+  max-width: 400px;
+  max-height: 400px;
+  margin: 4px;
+
+
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }

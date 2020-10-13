@@ -1,147 +1,20 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<div id="map"></div>
+<div id="map" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-top:100px"></div>
+<div style="text-align: center; margin-top: 20px;">
+  <button (click)="rand()">Random</button>
+</div>
 
-<!--
-<script>
-  var myLatLng;
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      myLatLng = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+<div>
+  <mat-card class="example-card " style="top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 50px;">
+    <mat-card-header>
+      <mat-card-title><img src={{focusImg}}  width="240" height="150"></mat-card-title>
+      <mat-card-subtitle>
+        <h3>{{focusName}}</h3>
+        <p>{{focusDes}}</p>
 
-    }, function () {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
+      </mat-card-subtitle>
 
-  function initMap() {
-
-    const contentString =
-      '<div id="content">' +
-      '<div id="siteNotice">' +
-      "</div>" +
-      '<center>' +
-      '<img src="https://lh3.googleusercontent.com/p/AF1QipNkmwigiRz6uZeQm14ORdxc-0y2FktUK_izG6j5=w600-k" alt="Girl in a jacket" width="240" height="150">' +
-      '<center/>' +
-      '<h1 id="firstHeading" class="firstHeading">TOP ONE</h1>' +
-      '<div id="bodyContent">' +
-      "<p><b>Uluru</b>, also referred to as Ayers Rock <br/>" +
-      "sandstone rock formation in the southern <br/> " +
-      "Northern Territory, central Australia. <br/>" +
-      "south west of the nearest large town, <br/>" +
-      "(280&#160;mi) by road. Kata Tjuta and Uluru <br/>" +
-      "Heritage Site.</p>" +
-      '<p>Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-      "more</a> " +
-      "</div>" +
-      "</div>";
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: myLatLng,
-      zoom: 15,
-      styles: [
-        {
-          "featureType": "administrative",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "administrative.land_parcel",
-          "elementType": "labels",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "poi",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road",
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "elementType": "labels",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "transit",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        }
-      ]
-    });
+    </mat-card-header>
+  </mat-card>
+</div>
 
 
-    var iconBase = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
-
-    var my = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      title: 'นี่ใช่ตำแหน่งของคุณหรือไม่',
-    });
-
-    for (var i = 0; i < lati.length; ++i) {
-      var po = {
-        lat: lati[i],
-        lng: lngi[i]
-      }
-
-      var marker = new google.maps.Marker({
-        position: {
-          lat: lati[i],
-          lng: lngi[i]
-        },
-        icon: "https://img.icons8.com/color/48/000000/order-shipped.png",
-        animation: google.maps.Animation.DROP,
-        map: map
-      });
-
-      attachSecretMessage(my, marker, contentString);
-    }
-  }
-  function attachSecretMessage(my, marker, contentString) {
-
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString,
-      maxWidth: 300,
-
-    });
-
-    marker.addListener('click', function () {
-      infowindow.open(marker.get('map'), marker);
-
-    });
-  }
-</script> -->

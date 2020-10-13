@@ -56,7 +56,7 @@ p
   border-radius:16px;
   overflow:hidden;
   -webkit-box-shadow:  8px 8px 18px #e1e1e3, -8px -8px 18px #ffffff;
-  box-shadow:  8px 8px 18px #04040eab, -8px -8px 18px #04040eab;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
@@ -203,13 +203,11 @@ opacity:1;
           </div>
         </div></a>
       <div class="property-description">
-        <h1> เมนูข้าว </h1>
-        <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทข้าวรอบๆตัวคุณ</p>
+        <h1> Food </h1>
+        <!-- <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทข้าวรอบๆตัวคุณ</p> -->
       </div>
       <a [routerLink]="['/map']" [state]="{ type:'food'}">
-        <div class="property-social-icons">
-          <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-        </div>
+        
       </a>
     </div>
     <div style="margin-left: 30px;">
@@ -223,13 +221,11 @@ opacity:1;
             </div>
           </div></a>
         <div class="property-description">
-          <h1> เมนูเส้น </h1>
-          <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทเส้นรอบๆคุณ</p>
+          <h1> Noodle </h1>
+          <!-- <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทเส้นรอบๆคุณ</p> -->
         </div>
         <a [routerLink]="['/map']" [state]="{ type:'noodle'}">
-          <div class="property-social-icons">
-            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-          </div>
+
         </a>
       </div>
       <div style="margin-left: 30px;">
@@ -243,13 +239,11 @@ opacity:1;
             </div>
           </div></a>
         <div class="property-description">
-          <h1> เมนูเครื่องเดิม </h1>
-          <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทเครื่องดื่มรอบๆตัวคุณ</p>
+          <h1> Drink </h1>
+          <!-- <p style="font-size: 18px;">ค้นหาร้านอาหารประเภทเครื่องดื่มรอบๆตัวคุณ</p> -->
         </div>
         <a [routerLink]="['/map']" [state]="{ type:'drink'}">
-          <div class="property-social-icons">
-            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-          </div>
+
         </a>
       </div>
   </div>
