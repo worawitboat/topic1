@@ -36,7 +36,7 @@ export class MapComponent implements OnInit {
     {
       name: "Wanyen",
       latlng: [15.1083301, 104.8993817],
-      img: "https://scontent.fubp1-1.fna.fbcdn.net/v/t31.0-8/23213102_2046312892269683_7104564255025435699_o.jpg?_nc_cat=111&_nc_sid=8bfeb9&_nc_eui2=AeGuPqsKjeeoQ6a3jniJbf0cENenlvX-J4oQ16eW9f4nitdE-YG01SULoR6oW87LZ5v4uH9St8wu8Hggsq_0H1Z6&_nc_ohc=BGRdW8BcCnYAX9Wk6dd&_nc_ht=scontent.fubp1-1.fna&oh=5e4393758590aca638421e5fcf304b38&oe=5FA82E15",
+      img: "https://img.kapook.com/u/2015/suppaporn/Ubon/mixubon.jpg",
       des: "Menu: rice, steak, snacks, drink"
     },
     {
